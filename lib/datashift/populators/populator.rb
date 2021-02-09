@@ -120,7 +120,7 @@ module DataShift
 
           @attribute_hash = @value.slice!( Populator.attribute_hash_const_regexp )
 
-          if attribute_hash && !attribute_hash.empty?
+          if attribute_hash.present?
             @attribute_hash = Populator.string_to_hash( attribute_hash )
             logger.info "Populator found attribute hash :[#{attribute_hash.inspect}]"
           else
