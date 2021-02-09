@@ -40,8 +40,9 @@ module DataShift
 
         # there are times when we need to save early, for example before assigning to
         # has_and_belongs_to associations which require the load_object has an id for the join table
-
-        load_object.save_if_new
+        if load_object.new_record?
+          load_object.save_if_new
+        end
 
         collection = []
         columns = []
