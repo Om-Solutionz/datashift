@@ -38,7 +38,7 @@ module DataShift
       def initialize
         @allow_empty_rows = false
         @abort_on_failure = false
-        @destroy_on_failure = true
+        @destroy_on_failure = false
         @header_row = 0
       end
 

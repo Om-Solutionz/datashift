@@ -156,7 +156,7 @@ module DataShift
       @expand_associations = false
 
       # default to more efficient attribute writing - no write to DB/no validations run
-      @update_and_validate = false
+      @update_and_validate = true
 
       @image_path_prefix = nil
     end
